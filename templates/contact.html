@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home | Solution Experts Plast
+{% endblock %}
+{% block content %}
+{% load static %}
+<section class="page-head">
+    <div class="container">
+        <div class="eyebrow">Get In Touch</div>
+        <h1>Contact Solution Experts Plast</h1>
+        <p>Send your product, project, packaging or custom molding requirement.</p>
+    </div>
+</section>
+<section class="section section-light">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-5">
+                <div class="contact-card">
+                    <h3>Company Details</h3>
+                    <p class="lead-muted mt-3"><i
+                            class="bi bi-geo-alt-fill text-primary me-2"></i><strong>Address</strong><br>Plot no M-16,
+                        Industrial area, Village – Bijepur,
+                        Tehsil – Depalpura, Indore, Madhya Pradesh – 453001
+                    </p>
+                    <p class="lead-muted"><i
+                            class="bi bi-telephone-fill text-primary me-2"></i><strong>Phone</strong><br>+91 9111668843
+                    </p>
+                    <p class="lead-muted"><i
+                            class="bi bi-envelope-fill text-primary me-2"></i><strong>Email</strong><br>solutionexpertsplast@gmail.com
+                    </p>
+                    <p class="lead-muted"><i class="bi bi-globe2 text-primary me-2"></i><strong>Website</strong><br><a
+                            href="https://www.solutionexpertsplast.com" target="_blank">www.solutionexpertsplast.com</a>
+                    </p><a class="btn btn-success" target="_blank" href="https://wa.me/918770784811"><i
+                            class="bi bi-whatsapp me-2"></i>WhatsApp</a>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="contact-card">
+                    <h3>Send Enquiry</h3>
+                    {% if messages %}
+                    {% for message in messages %}
+                    <div class="alert alert-danger">
+                        {{ message }}
+                    </div>
+                    {% endfor %}
+                    {% endif %}
+                    <p class="small-note">This front-end form opens your email client. For automatic database/email
+                        submission, connect it to your backend later.</p>
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-md-6 mb-3"><label class="form-label">Name</label><input name="Name"
+                                    class="form-control" required></div>
+                            <div class="col-md-6 mb-3"><label class="form-label">Phone</label><input name="Phone"
+                                    class="form-control" required></div>
+                            <div class="col-md-6 mb-3"><label class="form-label">Email</label><input type="email"
+                                    name="Email" class="form-control"></div>
+                            <div class="col-md-6 mb-3"><label class="form-label">Company</label><input name="Company"
+                                    class="form-control"></div>
+                            <div class="col-12 mb-3"><label class="form-label">Product / Service</label><select
+                                    name="Product" class="form-select">
+                                    <option>Dowel Bar Cap / Sleeve</option>
+                                    <option>LDPE Sheet / Separation Membrane</option>
+                                    <option>Backup Rod</option>
+                                    <option>Expansion Joint Sheet</option>
+                                    <option>Texturing Brush</option>
+                                    <option>Floater</option>
+                                    <option>Sealant Gun</option>
+                                    <option>HDPE Packaging</option>
+                                    <option>Custom Molding</option>
+                                    <option>Other</option>
+                                </select></div>
+                            <div class="col-12 mb-3"><label class="form-label">Requirement</label><textarea
+                                    name="Requirement" rows="6" class="form-control"
+                                    placeholder="Application, size, quantity, project location, specification..."></textarea>
+                            </div>
+                            <div class="col-12"><button type="submit" class="btn btn-gold">Send Enquiry</button></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

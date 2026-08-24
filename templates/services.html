@@ -1,0 +1,79 @@
+
+
+{% extends 'base.html' %}
+
+{% block title %}
+Home | Solution Experts Plast
+{% endblock %}
+{% block content %}
+{% load static %}
+    <section class="page-head">
+        <div class="container">
+            <div class="eyebrow">Capabilities</div>
+            <h1>Our Services</h1>
+            <p>Product manufacturing, distribution, custom molding and customer-focused support.</p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="card-pro p-4">
+                        <div class="icon"><i class="bi bi-building-gear"></i></div>
+                        <h3>Plastic Product Manufacturing</h3>
+                        <p class="lead-muted">Manufacturing and distribution of plastic products for construction and
+                            related applications.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card-pro p-4">
+                        <div class="icon"><i class="bi bi-gear"></i></div>
+                        <h3>Custom Molding</h3>
+                        <p class="lead-muted">Bespoke components and products developed according to customer
+                            specifications.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card-pro p-4">
+                        <div class="icon"><i class="bi bi-box-seam"></i></div>
+                        <h3>Packaging Solutions</h3>
+                        <p class="lead-muted">HDPE bottle packaging products with sizes described up to 5 litres in the
+                            profile.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card-pro p-4">
+                        <div class="icon"><i class="bi bi-file-earmark-check"></i></div>
+                        <h3>Quality Documentation</h3>
+                        <p class="lead-muted">The profile contains ISO certification, technical literature, test reports
+                            and manufacturer documentation used in source-approval submissions.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card-pro p-4">
+                        <div class="icon"><i class="bi bi-shield-check"></i></div>
+                        <h3>Project Compliance Support</h3>
+                        <p class="lead-muted">Products are presented for construction projects with applicable
+                            specifications, MTCs and third-party testing requirements as described in approval
+                            documents.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card-pro p-4">
+                        <div class="icon"><i class="bi bi-headset"></i></div>
+                        <h3>Customer Support</h3>
+                        <p class="lead-muted">A customer-centric approach focused on personalized service, product
+                            guidance and long-term relationships.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="cta">
+        <div class="container text-center">
+            <h2 class="fw-bold">Need Product Selection or Custom Molding?</h2>
+            <p>Send your specification, drawing, size or project requirement.</p><a class="btn btn-dark btn-lg"
+                href="contact.html">Talk To Our Team</a>
+        </div>
+    </section>
+{% endblock %}

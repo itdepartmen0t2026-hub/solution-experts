@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home | Solution Experts Plast
+{% endblock %}
+{% block content %}
+{% load static %}
+    <section class="page-head">
+        <div class="container">
+            <div class="eyebrow">Product</div>
+            <h1>{{product.title}}</h1>
+            <p>Critical component for PQC road construction, supporting load transfer and joint performance.</p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="row g-5 align-items-start">
+                {% if product.prod_image %}
+                <div class="col-lg-6"><img src="{{product.prod_image.url}}" class="product-img"
+                        alt="Dowel Bar Cap / Sleeve"></div>
+                {% endif %}
+                <div class="col-lg-6 pro-eye">
+                    <div class="eyebrow">Description</div>
+                    {{product.description|safe}}
+                <a class="btn btn-gold"
+                        href="{% url 'contact' %}">Request Quote</a>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-8">
+                    <h3>Characteristics / Specifications</h3>
+                    <p class="lead-muted">Sizes listed in the profile include 20 mm × 300 mm, 25 mm × 300 mm, 32 mm ×
+                        300 mm, 32 mm × 350 mm, 36 mm × 300 mm, 36 mm × 330 mm, 36 mm × 350 mm, 38 mm × 300 mm and 40 mm
+                        × 300 mm.</p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-card">
+                        <h4>Need a Specific Size?</h4>
+                        <p class="lead-muted">Share your project drawing, required size, quantity and applicable
+                            specification for discussion.</p><a class="btn btn-outline-primary"
+                            href="../contact.html">Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow">
+        <div class="container"><a class="navbar-brand" href="{%  url 'home' %}"><img src="{% static 'images/logo.jpeg' %}"
+                    alt="Solution Experts Plast"></a><button class="navbar-toggler" data-bs-toggle="collapse"
+                data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="{%  url 'home' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{%  url 'about' %}">About Us</a></li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="products.html"
+                            data-bs-toggle="dropdown">Products</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="{% url 'allproduct' %}">All Products</a></li>
+                            {% for x in pro %}
+                            <li><a class="dropdown-item" href="{% url 'product' x.slug %}  ">{{x.title}}</a>
+                            </li>
+                            {% endfor %}
+                            <!-- <li><a class="dropdown-item" href="products/ldpe-sheet.html">LDPE Sheet / Separation
+                                    Membrane</a></li>
+                            <li><a class="dropdown-item" href="products/backup-rod.html">Backup Rod</a></li>
+                            <li><a class="dropdown-item" href="products/expansion-joint-sheet.html">Expansion Joint
+                                    Sheet</a></li>
+                            <li><a class="dropdown-item" href="products/texturing-brush.html">Texturing Brush</a></li>
+                            <li><a class="dropdown-item" href="products/floater.html">Floater</a></li>
+                            <li><a class="dropdown-item" href="products/sealant-gun.html">Sealant Gun</a></li> -->
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'services' %}">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'industries' %}">Industries</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'quality' %}">Quality</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'career' %}">Career</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0"><a class="btn btn-gold" href="{% url 'contact' %}">Get Quote</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>

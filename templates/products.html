@@ -1,0 +1,133 @@
+
+  {% extends 'base.html' %}
+
+{% block title %}
+Home | Solution Experts Plast
+{% endblock %}
+{% block content %}
+{% load static %}
+    <section class="page-head">
+        <div class="container">
+            <div class="eyebrow">Product Range</div>
+            <h1>Our Products</h1>
+            <p>PQC consumables, construction materials and plastic solutions described in the company profile.</p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+          
+            <div class="row g-4">
+                 {% for item in product %}
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-pro"><img src="{{item.image.url}}" alt="Dowel Bar Cap / Sleeve">
+                        <div class="body">
+                            <h3>{{item.title}}</h3>
+                            <p class="lead-muted">{{item.short_description}}</p><a class="fw-bold"
+                                href="{% url 'product' item.slug %}">Technical Details <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="col-lg-4 col-md-6">
+                    <div class="card-pro"><img src="images/products/ldpe-sheet.jpg"
+                            alt="LDPE Sheet / Separation Membrane">
+                        <div class="body">
+                            <h3>LDPE Sheet / Separation Membrane</h3>
+                            <p class="lead-muted">LDPE sheet solution for moisture protection, durability and separation
+                                applications in PQC and infrastructure projects.</p><a class="fw-bold"
+                                href="products/ldpe-sheet.html">Technical Details <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-pro"><img src="images/products/backup-rod.jpg" alt="Backup Rod">
+                        <div class="body">
+                            <h3>Backup Rod</h3>
+                            <p class="lead-muted">Flexible support material for sealant applications in expansion joints
+                                and pavement cracks.</p><a class="fw-bold" href="products/backup-rod.html">Technical
+                                Details <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-pro"><img src="images/products/expansion-joint-sheet.jpg"
+                            alt="Expansion Joint Sheet">
+                        <div class="body">
+                            <h3>Expansion Joint Sheet</h3>
+                            <p class="lead-muted">Flexible joint material designed to accommodate movement and support
+                                durable road construction joints.</p><a class="fw-bold"
+                                href="products/expansion-joint-sheet.html">Technical Details <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="col-lg-4 col-md-6">
+                    <div class="card-pro"><img src="images/products/texturing-brush.jpg" alt="Texturing Brush">
+                        <div class="body">
+                            <h3>Texturing Brush</h3>
+                            <p class="lead-muted">Construction brush designed to create consistent surface texture on
+                                PQC surfaces.</p><a class="fw-bold" href="products/texturing-brush.html">Technical
+                                Details <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-pro"><img src="images/products/floater.jpg" alt="Floater">
+                        <div class="body">
+                            <h3>Floater</h3>
+                            <p class="lead-muted">Finishing tool for achieving smooth and even texture on PQC surfaces.
+                            </p><a class="fw-bold" href="products/floater.html">Technical Details <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-pro"><img src="images/products/sealant-gun.jpg" alt="Sealant Gun">
+                        <div class="body">
+                            <h3>Sealant Gun</h3>
+                            <p class="lead-muted">Manual, pneumatic and battery-operated options for precise sealant
+                                application in joint and crack sealing work.</p><a class="fw-bold"
+                                href="products/sealant-gun.html">Technical Details <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div> -->
+                  {% endfor %}
+            </div>
+          
+            <div id="packaging" class="row align-items-center g-5 mt-5 pt-5">
+                <div class="col-lg-6"><img src="{% static 'images/hdpproduct.png' %}" class="hero-img"
+                        alt="Packaging and plastic products"></div>
+                <div class="col-lg-6">
+                    <div class="eyebrow">Packaging Solutions</div>
+                    <h2 class="title mt-2">HDPE Bottle <span>Packaging</span></h2>
+                    <p class="lead-muted">The company profile states that it offers a diverse range of packaging
+                        products in HDPE bottles with volume up to 5 litres.</p><a class="btn btn-gold"
+                        href="contact.html">Enquire About Packaging</a>
+                </div>
+            </div>
+            <div id="custom" class="row align-items-center g-5 mt-5 pt-5">
+                <div class="col-lg-6 order-lg-2"><img src="{% static 'images/bespokeplastic.png' %}" class="hero-img"
+                        alt="Custom plastic products"></div>
+                <div class="col-lg-6">
+                    <div class="eyebrow">Custom Molding</div>
+                    <h2 class="title mt-2">Bespoke Plastic <span>Components</span></h2>
+                    <p class="lead-muted">Custom molding services are offered to create bespoke plastic components and
+                        products according to customer specifications.</p><a class="btn btn-gold"
+                        href="contact.html">Discuss Custom Molding</a>
+                </div>
+            </div>
+            <div id="environment" class="row align-items-center g-5 mt-5 pt-5">
+                <div class="col-lg-6"><img src="{% static 'images/product-collage.jpg' %}" class="hero-img"
+                        alt="Environmental solutions"></div>
+                <div class="col-lg-6">
+                    <div class="eyebrow">Environmental Solutions</div>
+                    <h2 class="title mt-2">Sustainable & <span>Responsible</span></h2>
+                    <p class="lead-muted">The profile highlights eco-friendly alternatives and recycling solutions aimed
+                        at reducing plastic waste and promoting a circular economy.</p><a class="btn btn-gold"
+                        href="contact.html">Discuss Your Requirement</a>
+                </div>
+            </div>
+        </div>
+    </section>
+  {% endblock %}

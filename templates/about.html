@@ -1,0 +1,72 @@
+
+
+
+{% extends 'base.html' %}
+
+{% block title %}
+Home | Solution Experts Plast
+{% endblock %}
+{% block content %}
+{% load static %}
+<section class="page-head">
+        <div class="container">
+            <div class="eyebrow">Company</div>
+            <h1>About Solution Experts Plast</h1>
+            <p>Manufacturing and distribution of high-quality plastic products.</p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6"><img src="{% static 'images/company-profile.jpg' %}" class="hero-img"
+                        alt="Solution Experts Plast profile"></div>
+                <div class="col-lg-6">
+                    <div class="eyebrow">Introduction</div>
+                    <h2 class="title mt-2">A Dynamic & <span>Innovative</span> Company</h2>
+                    <p class="lead-muted mt-4">Solution Experts Plast specializes in the manufacturing and distribution
+                        of high-quality plastic products. The profile states that the company was established in 2024
+                        and focuses on superior products and exceptional customer service.</p>
+                    <p class="lead-muted">The business is positioned around construction materials, packaging solutions,
+                        custom molding and environmental solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section-light">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="card-pro p-4">
+                        <div class="icon"><i class="bi bi-eye"></i></div>
+                        <h3>Vision</h3>
+                        <p class="lead-muted">To lead in providing sustainable, innovative and cost-effective plastic
+                            solutions that meet evolving customer needs, with a commitment to quality, reliability and
+                            environmental stewardship.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card-pro p-4">
+                        <div class="icon"><i class="bi bi-bullseye"></i></div>
+                        <h3>Mission</h3>
+                        <p class="lead-muted">To consistently exceed customer expectations through superior plastic
+                            products that offer unmatched performance, durability and value, while building long-term
+                            partnerships based on trust and mutual respect.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card-pro p-4">
+                        <div class="icon"><i class="bi bi-heart"></i></div>
+                        <h3>Core Values</h3>
+                        <ul class="check">
+                            <li><i class="bi bi-check-circle-fill"></i>Quality</li>
+                            <li><i class="bi bi-check-circle-fill"></i>Innovation</li>
+                            <li><i class="bi bi-check-circle-fill"></i>Customer Satisfaction</li>
+                            <li><i class="bi bi-check-circle-fill"></i>Sustainability</li>
+                            <li><i class="bi bi-check-circle-fill"></i>Integrity</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ {% endblock %}

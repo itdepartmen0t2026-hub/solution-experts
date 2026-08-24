@@ -1,0 +1,64 @@
+
+{% extends 'base.html' %}
+
+{% block title %}
+Home | Solution Experts Plast
+{% endblock %}
+{% block content %}
+{% load static %}
+    <section class="page-head">
+        <div class="container">
+            <div class="eyebrow">Quality & Sustainability</div>
+            <h1>Quality, Compliance & Sustainability</h1>
+            <p>Quality-focused practices supported by certification and testing documentation.</p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5"><img src="{% static 'images/certificates/iso-9001.jpg' %}" class="cert-img"
+                        alt="ISO 9001:2015 certificate"></div>
+                <div class="col-lg-7">
+                    <div class="eyebrow">Certification</div>
+                    <h2 class="title mt-2">ISO 9001:2015 <span>Quality Management System</span></h2>
+                    <p class="lead-muted mt-4">The company profile includes a Certificate of Registration for the
+                        Quality Management System of Solution Experts Plast. The certificate shown in the profile states
+                        ISO 9001:2015 and a scope covering manufacturing of dowel bar cap, LDPE membrane sheet, backup
+                        rod, expansion joint sheet, texturing brush, floater and sealant gun.</p>
+                    <p class="small-note">Certificate details should be verified from the original certificate before
+                        publication of any expiry or surveillance claim.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section-light">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="card-pro p-4">
+                        <div class="icon"><i class="bi bi-check2-square"></i></div>
+                        <h3>Quality Assurance</h3>
+                        <p class="lead-muted">The profile states that rigorous quality control measures are used to
+                            ensure products meet company standards.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card-pro p-4">
+                        <div class="icon"><i class="bi bi-file-earmark-text"></i></div>
+                        <h3>Testing & MTC</h3>
+                        <p class="lead-muted">Approval documents in the profile reference manufacturer test certificates
+                            and third-party laboratory testing for relevant consignments and projects.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card-pro p-4">
+                        <div class="icon"><i class="bi bi-recycle"></i></div>
+                        <h3>Sustainability</h3>
+                        <p class="lead-muted">Environmental solutions focus on eco-friendly alternatives, responsible
+                            manufacturing practices and recycling-oriented solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

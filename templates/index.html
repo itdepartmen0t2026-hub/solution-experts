@@ -1,0 +1,307 @@
+
+{% extends 'base.html' %}
+
+{% block title %}
+Home | Solution Experts Plast
+{% endblock %}
+{% block content %}
+{% load static %}
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6" >
+                    <div class="eyebrow mb-3">Solution Experts Plast</div>
+                    <h1>Solutions For <span>All Type</span> Of Construction</h1>
+                    <p class="mt-4">A dynamic and innovative company specializing in the manufacturing and distribution
+                        of high-quality plastic products, established in 2024 with a focus on quality, innovation and
+                        customer satisfaction.</p>
+                    <div class="mt-4"><a class="btn btn-gold btn-lg me-2" href="products.html">Explore Products</a><a
+                            class="btn btn-outline-gold btn-lg" href="contact.html">Request Quote</a></div>
+                </div>
+                <div class="col-lg-6">
+                    <div id="heroSlider" class="carousel slide carousel-fade hero-slider shadow-lg"
+                        data-bs-ride="carousel" data-bs-interval="4000">
+
+                        <!-- Carousel Indicators -->
+                        <div class="carousel-indicators">
+
+                            <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="0" class="active"
+                                aria-current="true" aria-label="Factory front view">
+                            </button>
+
+                            <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="1"
+                                aria-label="Factory side view">
+                            </button>
+
+                            <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="2"
+                                aria-label="Factory exterior">
+                            </button>
+
+                        </div>
+
+
+                        <!-- Carousel Images -->
+                        <div class="carousel-inner rounded-4 overflow-hidden">
+
+                            <!-- Slide 1 -->
+                            <div class="carousel-item active">
+
+                                <img src="{% static 'images/factory-front-1.png' %}" class="d-block w-100 hero-slide-img"
+                                    alt="Solution Experts Plast manufacturing facility">
+
+                                <div class="carousel-caption d-none d-md-block">
+                                    <span>Solution Experts Plast</span>
+                                    <p>Our Modern Manufacturing Facility</p>
+                                </div>
+
+                            </div>
+
+
+                            <!-- Slide 2 -->
+                            <div class="carousel-item">
+
+                                <img src="{% static 'images/factory-front-2.png' %}" class="d-block w-100 hero-slide-img"
+                                    alt="Solution Experts Plast industrial facility">
+
+                                <div class="carousel-caption d-none d-md-block">
+                                    <span>Industrial Infrastructure</span>
+                                    <p>Built for Reliable Supply & Quality</p>
+                                </div>
+
+                            </div>
+
+
+                            <!-- Slide 3 -->
+                            <div class="carousel-item">
+
+                                <img src="{% static 'images/factory-left-side.png' %}" class="d-block w-100 hero-slide-img"
+                                    alt="Solution Experts Plast factory side view">
+
+                                <div class="carousel-caption d-none d-md-block">
+                                    <span>Advanced Manufacturing</span>
+                                    <p>Quality-Driven Plastic & Construction Solutions</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Previous Button -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#heroSlider"
+                            data-bs-slide="prev">
+
+                            <span class="carousel-control-prev-icon" aria-hidden="true">
+                            </span>
+
+                            <span class="visually-hidden">
+                                Previous
+                            </span>
+
+                        </button>
+
+
+                        <!-- Next Button -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#heroSlider"
+                            data-bs-slide="next">
+
+                            <span class="carousel-control-next-icon" aria-hidden="true">
+                            </span>
+
+                            <span class="visually-hidden">
+                                Next
+                            </span>
+
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section ">
+        <div class="container">
+            <div class="text-center mb-5">
+                <div class="eyebrow">What We Do</div>
+                <h2 class="title mt-2">Plastic & Construction <span>Solutions</span></h2>
+                <p class="lead-muted mx-auto" style="max-width:760px">The company profile presents four core solution
+                    areas: packaging solutions, construction materials, custom molding and environmental solutions.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-pro  p-4">
+                        <div class="icon"><i class="bi bi-signpost-2"></i></div>
+                        <h4>Construction Materials</h4>
+                        <p class="lead-muted">Dowel bar caps/sleeves, LDPE sheet and other PQC consumables.</p><a
+                            href="products.html">Explore</a>
+                    </div>
+                </div>
+                <!-- <div class="col-lg-3 col-md-6">
+                    <div class="card-pro p-4">
+                        <div class="icon"><i class="bi bi-box-seam"></i></div>
+                        <h4>Packaging Solutions</h4>
+                        <p class="lead-muted">HDPE bottle packaging products with sizes up to 5 litres.</p><a
+                            href="products.html#packaging">Explore</a>
+                    </div>
+                </div> -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-pro   p-4">
+                        <div class="icon"><i class="bi bi-gear-wide-connected"></i></div>
+                        <h4>Custom Molding</h4>
+                        <p class="lead-muted">Bespoke plastic components and products according to customer
+                            specifications.</p><a href="products.html#custom">Explore</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-pro  p-4">
+                        <div class="icon"><i class="bi bi-recycle"></i></div>
+                        <h4>Environmental Solutions</h4>
+                        <p class="lead-muted">Eco-friendly alternatives and recycling-oriented solutions.</p><a
+                            href="products.html#environment">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section-light ">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6"><img src="{% static 'images/company-profile.jpg' %}" class="hero-img" alt="Company profile">
+                </div>
+                <div class="col-lg-6">
+                    <div class="eyebrow">About The Company</div>
+                    <h2 class="title mt-2">Quality, Innovation & <span>Customer Focus</span></h2>
+                    <p class="lead-muted mt-4">Solution Experts Plast aims to provide sustainable, innovative and
+                        cost-effective plastic solutions and to build long-term relationships with clients, suppliers
+                        and employees based on trust, integrity and mutual respect.</p>
+                    <ul class="check mt-4">
+                        <li><i class="bi bi-check-circle-fill"></i>Quality assurance</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Innovative solutions</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Customer-centric approach</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Sustainability initiatives</li>
+                    </ul><a class="btn btn-gold" href="about.html">Read About Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <div class="eyebrow">Featured Products</div>
+                <h2 class="title mt-2">PQC & Infrastructure <span>Product Range</span></h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-pro"><img src="{% static 'images/products/dowel-bar-cap.jpg' %}" alt="Dowel Bar Cap / Sleeve">
+                        <div class="body">
+                            <h3>Dowel Bar Cap / Sleeve</h3>
+                            <p class="lead-muted">Critical component for PQC road construction, supporting load transfer
+                                and joint performance.</p><a href="products/dowel-bar-cap.html" class="fw-bold">View
+                                product <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-pro"><img src="{% static 'images/products/ldpe-sheet.jpg' %}"
+                            alt="LDPE Sheet / Separation Membrane">
+                        <div class="body">
+                            <h3>LDPE Sheet / Separation Membrane</h3>
+                            <p class="lead-muted">LDPE sheet solution for moisture protection, durability and separation
+                                applications in PQC and infrastructure projects.</p><a href="products/ldpe-sheet.html"
+                                class="fw-bold">View product <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-pro"><img src="{% static 'images/products/backup-rod.jpg' %}" alt="Backup Rod">
+                        <div class="body">
+                            <h3>Backup Rod</h3>
+                            <p class="lead-muted">Flexible support material for sealant applications in expansion joints
+                                and pavement cracks.</p><a href="products/backup-rod.html" class="fw-bold">View product
+                                <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-pro"><img src="images/products/expansion-joint-sheet.jpg"
+                            alt="Expansion Joint Sheet">
+                        <div class="body">
+                            <h3>Expansion Joint Sheet</h3>
+                            <p class="lead-muted">Flexible joint material designed to accommodate movement and support
+                                durable road construction joints.</p><a href="products/expansion-joint-sheet.html"
+                                class="fw-bold">View product <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-pro"><img src="images/products/texturing-brush.jpg" alt="Texturing Brush">
+                        <div class="body">
+                            <h3>Texturing Brush</h3>
+                            <p class="lead-muted">Construction brush designed to create consistent surface texture on
+                                PQC surfaces.</p><a href="products/texturing-brush.html" class="fw-bold">View product <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-pro"><img src="images/products/floater.jpg" alt="Floater">
+                        <div class="body">
+                            <h3>Floater</h3>
+                            <p class="lead-muted">Finishing tool for achieving smooth and even texture on PQC surfaces.
+                            </p><a href="products/floater.html" class="fw-bold">View product <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5"><a class="btn btn-gold" href="products.html">View All Products</a></div>
+        </div>
+    </section>
+    <section class="section section-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <div class="eyebrow">Why Choose Us</div>
+                <h2 class="title mt-2">Built Around <span>Performance</span></h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card-pro p-4">
+                        <div class="icon"><i class="bi bi-award"></i></div>
+                        <h4>Quality Assurance</h4>
+                        <p class="lead-muted">The profile highlights rigorous quality control and quality standards for
+                            products and processes.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-pro p-4">
+                        <div class="icon"><i class="bi bi-lightbulb"></i></div>
+                        <h4>Innovative Solutions</h4>
+                        <p class="lead-muted">The company seeks new ways to improve products, services and operations.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-pro p-4">
+                        <div class="icon"><i class="bi bi-people"></i></div>
+                        <h4>Customer-Centric Approach</h4>
+                        <p class="lead-muted">Dedicated service and support are central to the company's stated
+                            approach.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="cta">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h2 class="fw-bold">Have a Construction or Plastic Product Requirement?</h2>
+                    <p class="mb-0">Share your application, specification, size or quantity with our team.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end mt-3 mt-lg-0"><a class="btn send-enquiry " href="contact.html">Send
+                        Enquiry</a></div>
+            </div>
+        </div>
+    </section>
+  
+ {% endblock %}
