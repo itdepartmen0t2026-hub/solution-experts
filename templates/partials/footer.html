@@ -19,10 +19,9 @@
                 <div class="col-md-3">
                     <h5>Products</h5>
                     <ul class="list-unstyled">
-                        <li><a href="products.html" class="text-white-50">Construction Products</a></li>
-                        <li><a href="products.html#packaging" class="text-white-50">Packaging Solutions</a></li>
-                        <li><a href="products.html#custom" class="text-white-50">Custom Molding</a></li>
-                        <li><a href="products.html#environment" class="text-white-50">Environmental Solutions</a></li>
+                        <li><a href="{% url 'allproduct' %}" class="text-white-50">Construction Products</a></li>
+                        <li><a href="{% url 'allproduct' %}#custom" class="text-white-50">Custom Molding</a></li>
+                        <li><a href="{% url 'allproduct' %}#environment" class="text-white-50">Environmental Solutions</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3">

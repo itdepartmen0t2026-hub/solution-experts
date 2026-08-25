@@ -734,3 +734,258 @@ html {
         transition-duration: 0.01ms !important;
     }
 }
+
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+}
+
+/* Tablet and Desktop */
+@media (min-width: 577px) {
+    .hero-buttons {
+        flex-direction: row;
+    }
+
+    .hero-buttons .btn {
+        width: auto;
+    }
+}
+
+
+
+/* ==============================
+   HERO SLIDER
+================================= */
+
+.hero-slider {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Image */
+.hero-slide-img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    animation: heroZoom 8s ease-in-out infinite alternate;
+}
+
+/* Smooth Zoom Animation */
+@keyframes heroZoom {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.08);
+    }
+}
+
+/* Different animation for active slide */
+.carousel-item.active .hero-slide-img {
+    animation: heroZoom 8s ease-in-out forwards;
+}
+
+/* ==============================
+   DARK GRADIENT OVERLAY
+================================= */
+
+.hero-slider .carousel-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.05),
+        rgba(0, 0, 0, 0.65)
+    );
+
+    pointer-events: none;
+}
+
+/* ==============================
+   CAPTION ANIMATION
+================================= */
+
+.carousel-caption {
+    bottom: 45px;
+    text-align: left;
+    left: 8%;
+    right: 8%;
+    z-index: 2;
+
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.carousel-item.active .carousel-caption {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Company Name */
+.carousel-caption span {
+    display: inline-block;
+
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    padding: 8px 15px;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+}
+
+/* Caption Text */
+.carousel-caption p {
+    font-size: 24px;
+    font-weight: 700;
+
+    margin-top: 12px;
+    margin-bottom: 0;
+}
+
+/* ==============================
+   NAVIGATION BUTTONS
+================================= */
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 55px;
+    height: 55px;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    background: rgba(0, 0, 0, 0.35);
+
+    border-radius: 50%;
+
+    opacity: 0;
+
+    transition: all 0.4s ease;
+}
+
+.hero-slider:hover .carousel-control-prev,
+.hero-slider:hover .carousel-control-next {
+    opacity: 1;
+}
+
+.carousel-control-prev {
+    left: 20px;
+}
+
+.carousel-control-next {
+    right: 20px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    transform: translateY(-50%) scale(1.12);
+
+    background: var(--primary-red);
+}
+
+/* ==============================
+   INDICATORS
+================================= */
+
+.carousel-indicators {
+    margin-bottom: 20px;
+}
+
+.carousel-indicators button {
+    width: 10px !important;
+    height: 10px !important;
+
+    border-radius: 50% !important;
+
+    margin: 0 6px !important;
+
+    transition: all 0.4s ease;
+}
+
+.carousel-indicators .active {
+    width: 30px !important;
+
+    border-radius: 10px !important;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 991px) {
+
+    .hero-slide-img {
+        height: 420px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .hero-slide-img {
+        height: 350px;
+    }
+
+    .carousel-caption {
+        bottom: 30px;
+    }
+
+    .carousel-caption p {
+        font-size: 18px;
+    }
+
+    .carousel-caption span {
+        font-size: 11px;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .hero-slide-img {
+        height: 280px;
+    }
+
+    .carousel-caption {
+        display: block !important;
+        bottom: 25px;
+    }
+
+    .carousel-caption p {
+        font-size: 16px;
+    }
+
+    .carousel-caption span {
+        font-size: 9px;
+        padding: 6px 10px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: none;
+    }
+
+}

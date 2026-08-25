@@ -9,7 +9,8 @@ from django.conf import settings
 # Create your views here.
 def home(request):
     pro=Product.objects.values('title','slug')
-    return render(request,'index.html',{'pro':pro})
+    product=Product.objects.filter(is_active=True)
+    return render(request,'index.html',{'pro':pro,'product':product})
 
 def about(request):
     pro=Product.objects.values('title','slug')

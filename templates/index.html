@@ -9,14 +9,14 @@ Home | Solution Experts Plast
     <section class="hero">
         <div class="container">
             <div class="row align-items-center g-5">
-                <div class="col-lg-6" >
+                <div class="col-lg-6 col-md-6 col-xs-6" >
                     <div class="eyebrow mb-3">Solution Experts Plast</div>
                     <h1>Solutions For <span>All Type</span> Of Construction</h1>
                     <p class="mt-4">A dynamic and innovative company specializing in the manufacturing and distribution
                         of high-quality plastic products, established in 2024 with a focus on quality, innovation and
                         customer satisfaction.</p>
-                    <div class="mt-4"><a class="btn btn-gold btn-lg me-2" href="products.html">Explore Products</a><a
-                            class="btn btn-outline-gold btn-lg" href="contact.html">Request Quote</a></div>
+                    <div class="mt-4 hero-buttons"><a class="btn btn-gold btn-lg  me-2" href="{% url 'allproduct' %}">Explore Products</a><a
+                            class="btn btn-outline-gold btn-lg" href="{% url 'contact' %}">Request Quote</a></div>
                 </div>
                 <div class="col-lg-6">
                     <div id="heroSlider" class="carousel slide carousel-fade hero-slider shadow-lg"
@@ -133,7 +133,7 @@ Home | Solution Experts Plast
                         <div class="icon"><i class="bi bi-signpost-2"></i></div>
                         <h4>Construction Materials</h4>
                         <p class="lead-muted">Dowel bar caps/sleeves, LDPE sheet and other PQC consumables.</p><a
-                            href="products.html">Explore</a>
+                            href="{% url 'allproduct' %}">Explore</a>
                     </div>
                 </div>
                 <!-- <div class="col-lg-3 col-md-6">
@@ -149,7 +149,7 @@ Home | Solution Experts Plast
                         <div class="icon"><i class="bi bi-gear-wide-connected"></i></div>
                         <h4>Custom Molding</h4>
                         <p class="lead-muted">Bespoke plastic components and products according to customer
-                            specifications.</p><a href="products.html#custom">Explore</a>
+                            specifications.</p><a href="{% url 'allproduct' %}#custom">Explore</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
@@ -157,7 +157,7 @@ Home | Solution Experts Plast
                         <div class="icon"><i class="bi bi-recycle"></i></div>
                         <h4>Environmental Solutions</h4>
                         <p class="lead-muted">Eco-friendly alternatives and recycling-oriented solutions.</p><a
-                            href="products.html#environment">Explore</a>
+                            href="{% url 'allproduct' %}#environment">Explore</a>
                     </div>
                 </div>
             </div>
@@ -179,7 +179,7 @@ Home | Solution Experts Plast
                         <li><i class="bi bi-check-circle-fill"></i>Innovative solutions</li>
                         <li><i class="bi bi-check-circle-fill"></i>Customer-centric approach</li>
                         <li><i class="bi bi-check-circle-fill"></i>Sustainability initiatives</li>
-                    </ul><a class="btn btn-gold" href="about.html">Read About Us</a>
+                    </ul><a class="btn btn-gold" href="{% url 'about' %}">Read About Us</a>
                 </div>
             </div>
         </div>
@@ -191,17 +191,18 @@ Home | Solution Experts Plast
                 <h2 class="title mt-2">PQC & Infrastructure <span>Product Range</span></h2>
             </div>
             <div class="row g-4">
+                {% for x in product %}
                 <div class="col-lg-4 col-md-6">
-                    <div class="card-pro"><img src="{% static 'images/products/dowel-bar-cap.jpg' %}" alt="Dowel Bar Cap / Sleeve">
+                    <div class="card-pro"><img src="{{x.image.url}}" alt="Dowel Bar Cap / Sleeve">
                         <div class="body">
-                            <h3>Dowel Bar Cap / Sleeve</h3>
-                            <p class="lead-muted">Critical component for PQC road construction, supporting load transfer
-                                and joint performance.</p><a href="products/dowel-bar-cap.html" class="fw-bold">View
+                            <h3>{{x.title}}</h3>
+                            <p class="lead-muted">{{x.short_description}}</p><a href="{% url 'product' x.slug %}" class="fw-bold">View
                                 product <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                {% endfor %}
+                <!-- <div class="col-lg-4 col-md-6">
                     <div class="card-pro"><img src="{% static 'images/products/ldpe-sheet.jpg' %}"
                             alt="LDPE Sheet / Separation Membrane">
                         <div class="body">
@@ -211,8 +212,8 @@ Home | Solution Experts Plast
                                 class="fw-bold">View product <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
+                </div> -->
+                <!-- <div class="col-lg-4 col-md-6">
                     <div class="card-pro"><img src="{% static 'images/products/backup-rod.jpg' %}" alt="Backup Rod">
                         <div class="body">
                             <h3>Backup Rod</h3>
@@ -252,9 +253,9 @@ Home | Solution Experts Plast
                                     class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
-            <div class="text-center mt-5"><a class="btn btn-gold" href="products.html">View All Products</a></div>
+            <div class="text-center mt-5"><a class="btn btn-gold" href="{% url 'allproduct' %}">View All Products</a></div>
         </div>
     </section>
     <section class="section section-light">
@@ -298,7 +299,7 @@ Home | Solution Experts Plast
                     <h2 class="fw-bold">Have a Construction or Plastic Product Requirement?</h2>
                     <p class="mb-0">Share your application, specification, size or quantity with our team.</p>
                 </div>
-                <div class="col-lg-4 text-lg-end mt-3 mt-lg-0"><a class="btn send-enquiry " href="contact.html">Send
+                <div class="col-lg-4 text-lg-end mt-3 mt-lg-0"><a class="btn send-enquiry " href="{% url 'contact' %}">Send
                         Enquiry</a></div>
             </div>
         </div>
