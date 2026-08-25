@@ -1,15 +1,11 @@
 {
   "version": 2,
-  "builds": [
+  "buildCommand": "pip install -r requirements.txt",
+  "outputDirectory": ".",
+  "rewrites": [
     {
-      "src": "solutionsexperts/wsgi.py",
-      "use": "@vercel/python"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "solutionsexperts/wsgi.py"
+      "source": "/(.*)",
+      "destination": "/solutionsexperts/wsgi.py"
     }
   ]
 }
