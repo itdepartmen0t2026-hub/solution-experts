@@ -211,5 +211,6 @@ MAILERS = {
 
 DEFAULT_FROM_EMAIL = "itdepartmen0t2026@gmail.com"
 CSRF_TRUSTED_ORIGINS = [
-    "https://web-production-355ed.up.railway.app/",
+    "https://web-production-355ed.up.railway.app",
+    "http://web-production-355ed.up.railway.app",
 ]
