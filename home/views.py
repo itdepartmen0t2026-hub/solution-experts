@@ -128,20 +128,21 @@ Product / Service: {product}
 Requirement:
 {requirement}
 """
+        try: 
+            send_mail(
+                subject,
+                message,
+                settings.DEFAULT_FROM_EMAIL,
+                ['kpsales32@gmail.com'],
+                fail_silently=False,
+            )
 
-        send_mail(
-            subject,
-            message,
-            settings.DEFAULT_FROM_EMAIL,
-            ['kpsales32@gmail.com'],
-            fail_silently=False,
-        )
-
-        messages.success(
-            request,
-            'Your enquiry has been submitted successfully.'
-        )
-
+            messages.success(
+                request,
+                'Your enquiry has been submitted successfully.'
+            )
+        except exceptions as e:
+              print('error',e)
         return redirect('contact')
 
     return render(
