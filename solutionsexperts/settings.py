@@ -205,6 +205,7 @@ MAILERS = {
             "username": "itdepartmen0t2026@gmail.com",
             "password": "lwzyavhzjmjngjtd",
             "use_tls": True,
+            "timeout":10,
         },
     },
 }
